@@ -1,0 +1,15 @@
+---
+title: "Example Notebook"
+---
+
+```{python}
+
+# wrap any path in here() functions
+```
+
+
+
+```{r}
+#similarly, any path should be here::here() wrapped
+
+```
