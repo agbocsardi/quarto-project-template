@@ -1,0 +1,8 @@
+data/
+
+# this is for quarto notebook exports
+*_files/
+*_cache/
+
+/.quarto/
+/_output/
