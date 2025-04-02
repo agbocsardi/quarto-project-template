@@ -1,0 +1,21 @@
+project:
+  output-dir: _output
+
+bibliography: manuscript/references.bib
+csl: apa-6th-edition.csl
+format:
+    html:
+        df-print: paged
+        code-fold: false
+    aog-article-pdf: 
+      documentclass: article
+      include-in-header: 
+        - text: |
+            \usepackage{longtable}
+            \usepackage{booktabs}
+            \usepackage{dcolumn}
+      papersize: a4
+execute:
+    daemonize: false
+
+
