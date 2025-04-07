@@ -4,8 +4,11 @@
 ## Tools you'll need
 
 - [Quarto](https://quarto.org/) 
-- `uv`
-- R
+    - Handles making markdown notebooks into beautiful outputs, from PDF to html (or even Word!) 
+- [`uv`](https://docs.astral.sh/uv/)
+    - My python project and package manager of choice, lightning fast, simple, all in one place, no more venv and pip struggles
+- R and `renv`
+    - Kinda self-explanatory, but `renv` makes managing R projects nice without the bloat, and it comes built in with R!
 
 ## To get started
 
