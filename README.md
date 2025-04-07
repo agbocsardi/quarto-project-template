@@ -3,7 +3,7 @@
 
 ## Tools you'll need
 
-- Quarto 
+- [Quarto](https://quarto.org/) 
 - `uv`
 - R
 
