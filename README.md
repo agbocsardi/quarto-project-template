@@ -9,7 +9,16 @@
 
 ## To get started
 
-As this is a template repo, you'll probably want to clone it, then delete the `.git` folder, and initialize it as a new repo for your own project.
+As this is a template repo, you'll probably want to use it as a basis for your own project repo. You have a few options:
+
+1. Clone it, then delete the `.git` folder, and initialize it as a new repo for your own project.
+
+2. "Use this template" button on GitHub.
+
+3. Alternatively, if you're using the GitHub CLI tool:
+    ```sh
+    gh repo create <new-repo-name> --template="https://github.com/agbocsardi/quarto-project-template.git"
+    ```
 
 ## Intended Workflow Guidelines
 - High-level workflow code (what to run, what order, etc) should live in the project root, this should mostly just call things you have defined in your `lib` modules. 
