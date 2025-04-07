@@ -7,6 +7,10 @@
 - `uv`
 - R
 
+## To get started
+
+As this is a template repo, you'll probably want to clone it, then delete the `.git` folder, and initialize it as a new repo for your own project.
+
 ## Intended Workflow Guidelines
 - High-level workflow code (what to run, what order, etc) should live in the project root, this should mostly just call things you have defined in your `lib` modules. 
     - You can use `source('lib/foo.r')` in R, and `from lib.foo import bar` in python to access the functions you defined.
