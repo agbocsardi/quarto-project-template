@@ -1,4 +1,5 @@
 project:
+  execute-dir: project
   output-dir: _output
 
 bibliography: manuscript/references.bib
