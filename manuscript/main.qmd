@@ -1,0 +1,55 @@
+---
+title: Here goes a cool title
+date: 2025-04-08
+author:
+  - name: Gergő Bocsárdi
+    affiliations:
+      - ref: jads
+      - ref: tue
+abstract: Here goes a cool abstract
+affiliations:
+  - id: jads
+    name: Jheronimus Academy of Data Science
+  - id: tue
+    name: Eindhoven University of Technology
+include-in-header:
+  - text: |
+      \usepackage{longtable}
+      \usepackage{graphicx}
+      \usepackage{booktabs}
+      \usepackage{dcolumn}
+      \usepackage{ntheorem}
+      \usepackage{float}
+number-sections: true
+bibliography: manuscript/REML.bib
+---
+
+# Introduction
+{{< include 1-intro.qmd >}}
+
+# Theory
+{{< include 2-theory.qmd >}}
+
+# Methodology
+{{< include 3-methods.qmd >}}
+
+# Results
+{{< include 4-results.qmd >}}
+
+# Discussion
+{{< include 5-discussion.qmd >}}
+
+
+{{< pagebreak >}}
+
+
+# References
+
+::: {#refs}
+:::
+
+
+{{< pagebreak >}}
+
+# Appendix {.appendix}
+
