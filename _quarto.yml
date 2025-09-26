@@ -2,7 +2,7 @@ project:
   execute-dir: project
   output-dir: _output
 
-bibliography: manuscript/references.bib
+bibliography: manuscript/REML.bib
 csl: apa-6th-edition.csl
 format:
     html:
@@ -10,13 +10,30 @@ format:
         code-fold: false
     aog-article-pdf: 
       documentclass: article
+      keep-tex: true
+      # urlcolor: black
+      colorlinks: false
       include-in-header: 
         - text: |
             \usepackage{longtable}
+            \usepackage{hyperref}
             \usepackage{booktabs}
             \usepackage{dcolumn}
       papersize: a4
+    # pdf: 
+      # documentclass: scrartcl
+      # papersize: a4
+      # fontsize: 14pt
+      # mainfont: "Noto Serif"
+      # geometry:
+      #   - top=20mm
+      #   - left=20mm
+      #   - right=20mm
+      #   - heightrounded
 execute:
-    daemonize: false
+  echo: false
+  warning: false
+  daemonize: false
+
 
 
