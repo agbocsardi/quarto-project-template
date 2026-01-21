@@ -20,7 +20,8 @@ format:
             \usepackage{booktabs}
             \usepackage{dcolumn}
       papersize: a4
-    # pdf: 
+    pdf: 
+      keep-tex: true
       # documentclass: scrartcl
       # papersize: a4
       # fontsize: 14pt
