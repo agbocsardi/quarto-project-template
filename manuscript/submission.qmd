@@ -1,0 +1,79 @@
+---
+title: "Your Title Here"
+format:
+  docx:
+    # reference-doc: ../your-template.docx
+    number-sections: false
+csl: apa.csl
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+```{python}
+# | label: setup
+import sys
+
+from pyprojroot import here
+
+sys.path.insert(0, str(here("scripts")))
+
+TABLE_DIR = here("output/tables")
+FIGURE_DIR = here("output/figures")
+
+import pandas as pd
+from IPython.display import Markdown
+
+
+def table_with_caption(df: pd.DataFrame, caption: str) -> str:
+    """Render a markdown table with the caption as the last row."""
+    md = df.to_markdown(index=False)
+    n_cols = len(df.columns)
+    caption_row = "| " + caption + " |" + " |" * (n_cols - 1)
+    return md + "\n" + caption_row
+
+
+def figure_with_caption(image_path: str, caption: str) -> str:
+    """Render a figure as a simple 2-row, 1-column markdown table."""
+    return f"| |\n|---|\n| ![]({image_path}) |\n| {caption} |"
+```
+
+# Introduction
+
+\[Introduction text goes here.\]
+
+# Theory
+
+\[Theory text goes here.\]
+
+# Methodology
+
+\[Methodology text goes here.\]
+
+<!-- Example: include a table from output/tables/ -->
+<!-- ```{python}
+df = pd.read_csv(TABLE_DIR / "tab-descriptive-stats.csv")
+Markdown(table_with_caption(df, "Table 1. Descriptive statistics"))
+``` -->
+
+<!-- Example: include a figure from output/figures/ -->
+<!-- ```{python}
+Markdown(figure_with_caption(
+    str(FIGURE_DIR / "fig-example.png"),
+    "Figure 1. An example figure.",
+))
+``` -->
+
+# Results
+
+\[Results text goes here.\]
+
+# Discussion
+
+\[Discussion text goes here.\]
+
+# References
+
+::: {#refs}
+:::

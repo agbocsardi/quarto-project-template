@@ -1,6 +1,6 @@
 data/
 
-# this is for quarto notebook exports
+# Quarto notebook exports
 *_files/
 *_cache/
 
@@ -8,3 +8,14 @@ data/
 /_output/
 
 /renv
+
+**/*.quarto_ipynb
+
+__pycache__/
+*.pyc
+*.pyo
+
+.DS_Store
+
+.claude/
+.venv/

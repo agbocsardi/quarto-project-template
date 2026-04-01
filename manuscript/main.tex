@@ -1,0 +1,89 @@
+% Compile with XeLaTeX or LuaLaTeX
+\documentclass[a4paper,11pt]{article}
+
+% --- Font (requires XeLaTeX or LuaLaTeX) ---
+\usepackage{fontspec}
+\setmainfont{Georgia}
+
+% --- Page geometry ---
+\usepackage[
+  a4paper,
+  top=1in, bottom=1in,
+  left=1in, right=1in
+]{geometry}
+
+% --- Spacing ---
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+
+% --- Section headings ---
+\usepackage{titlesec}
+\titleformat{\section}{\fontsize{13}{15}\selectfont\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\fontsize{11}{13}\selectfont\bfseries\itshape}{}{0pt}{}
+\titleformat{\subsubsection}{\fontsize{10}{12}\selectfont\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\titlespacing*{\subsubsection}{0pt}{6pt}{2pt}
+
+% --- Captions ---
+\usepackage{caption}
+\captionsetup{
+  font={bf},
+  labelfont={bf},
+  justification=centering,
+  position=below
+}
+
+% --- Packages ---
+\usepackage{longtable}
+\usepackage{graphicx}
+\graphicspath{{../output/figures/}}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[backend=biber,style=apa]{biblatex}
+
+\addbibresource{references.bib}
+
+% --- Title ---
+\title{Your Title Here}
+\author{
+  First Author\textsuperscript{1} \and
+  Second Author\textsuperscript{1,2}
+}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Your abstract here.
+\end{abstract}
+
+\section{Introduction}
+\input{1-intro}
+
+\section{Theory}
+\input{2-theory}
+
+\section{Methodology}
+\input{3-methods}
+
+\section{Results}
+\input{4-results}
+
+\section{Discussion}
+\input{5-discussion}
+
+\newpage
+\printbibliography
+
+\newpage
+\appendix
+\section{Appendix}
+
+\end{document}
