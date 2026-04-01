@@ -1,6 +1,13 @@
 project:
   execute-dir: project
   output-dir: _output
+format:
+  html:
+    fig-width: 7
+    fig-height: 5
+    fig-responsive: true
+  gfm: default
+
 
 bibliography: manuscript/references.bib
 
